@@ -52,5 +52,5 @@ toSQL = final.rename(columns={'기관명':'name', '대표전화1':'telephone'})
 toSQL['map_url'] = ''
 
 
-# engine = create_engine(url, echo=True)
-# toSQL.to_sql(name='hospital', if_exists='append' ,con=engine, index=False)
+engine = create_engine(url, echo=True)
+toSQL.to_sql(name='hospital', if_exists='append', con=engine, index=False)
